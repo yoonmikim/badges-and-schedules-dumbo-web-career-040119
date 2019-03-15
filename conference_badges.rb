@@ -18,6 +18,12 @@ def assign_rooms(array)
   }
 end
 
+def assign_rooms(arr)
+  arr.map.with_index(1) do |el, i|
+    "Hello, #{el}! You'll be assigned to room #{i}!"
+  end
+end
+
 def printer(array)
   batch_badge_creator(array).each do |badge|
     puts badge
