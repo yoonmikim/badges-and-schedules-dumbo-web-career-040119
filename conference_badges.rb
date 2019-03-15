@@ -1,7 +1,7 @@
 # Write your code here.
 
 def badge_maker(name)
-  puts "Hello, my name is #{name}."
+  "Hello, my name is #{name}."
 end
 
 def batch_badge_creator(array)
@@ -13,12 +13,17 @@ def batch_badge_creator(array)
 end
 
 def assign_rooms(array)
-  array.each_with_index do { |el, i|
-    puts "Hello, #{el}! You'll be assigned to room #{i}!"
+  array.each_with_index.map { |el, i|
+    "Hello, #{el}! You'll be assigned to room #{i+1}!"
   }
 end
 
 def printer(array)
-  batch_badge_creator(array)
-  assign_rooms(array)
+  batch_badge_creator(array).each do |badge|
+    puts badge
+  end
+  
+  assign_rooms(array).each do |assignment|
+    puts assignment
+  end
 end
